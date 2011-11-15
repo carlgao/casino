@@ -26,6 +26,12 @@
           send('join', room._username,null);
           send('chat', room._username,'has joined!');
           send('poll', room._username,null, room._poll);
+					var spanUser = document.createElement('span');
+					var chat = $('chat');
+					var lineBreak = document.createElement('br');
+					chat.appendChild(spanUser);
+					chat.appendChild(lineBreak);
+					
         },
         chat: function(text) {
           if (text != null && text.length>0 )
